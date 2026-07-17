@@ -1,0 +1,34 @@
+17-07-2026 / 12:39
+NO AI WAS USED IN THE MAKING OF THIS.
+
+You might think it's a bit dumb for the first project in cpp to be to try to create a programming language, and it is. 
+
+I'm Lico and i'll be documenting everything that I read online and what i figure out in this repo / .txt
+
+First things first, is i need to define what I want from this programming language. not a lot, since the objective is to only understand the fundementals of programming.
+But something that i'd like to do is make it an interpreted language, what this means is that instead of compiling the whole code and executing it at a lower level, the code runs line by line and figures out what to do on the go.
+(A caveat here, i'm not sure if this is correct, i'll look further into this later and then i will add another note here.)
+
+
+and although i'm trying to create a programming language, i have 0 EXPERIENCE WITH C++ so I'll start by learning the syntax
+
+As c++ is a compiled langauge, i need to figure out a way to compile my code, since i'm on a windows environment, and using VSCode, i need to install a few tools
+- MSYS2
+- C/C++ for Visual Studio Code
+
+after installing msy2s i ran ´pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain´ and installed everything.
+then i added a new environment variable, on PATH, for the path ´C:\msys64\ucrt64\bin´
+after checking and running a code that i found on stackoverflow which is
+
+´´´
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+´´´
+I got my First Hello World!
+
+and for today i'm out of time, But tomorrow i'll continue with the project
+
