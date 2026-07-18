@@ -1,4 +1,4 @@
-17-07-2026 / 12:39
+/- 17-07-2026 / 12:39 -/
 NO AI WAS USED IN THE MAKING OF THIS.
 
 You might think it's a bit dumb for the first project in cpp to be to try to create a programming language, and it is. 
@@ -12,7 +12,7 @@ But something that i'd like to do is make it an interpreted language, what this 
 
 and although i'm trying to create a programming language, i have 0 EXPERIENCE WITH C++ so I'll start by learning the syntax
 
-As c++ is a compiled langauge, i need to figure out a way to compile my code, since i'm on a windows environment, and using VSCode, i need to install a few tools
+As c++ is a compiled language, i need to figure out a way to compile my code, since i'm on a windows environment, and using VSCode, i need to install a few tools
 - MSYS2
 - C/C++ for Visual Studio Code
 
@@ -32,3 +32,24 @@ I got my First Hello World!
 
 and for today i'm out of time, But tomorrow i'll continue with the project
 
+
+
+/- 18-07-2026 / 10:24 -/
+(earlier today i added a gitignore that i forgot to add yesterday, so there was a bunch of useless files in the repository)
+Today i want to understand better how the c++ language works, so i'll try to solve a leet code question using c++.
+And since i'm a complete begginer on the syntax, i'll start with a VERY simple challange, transforming a int into a string.
+
+so lets say we have a variable int 10, and we want the result to be a str "10", on python this would be as simple as str(10), but i have no idea if the same can apply in c++
+
+i've had a TON of issues already, apparently you need to include a #include <string>, just to be able to assign strings in a code.
+After a few searches, i found the std::to_string function from the <string> library, and this does exactly what i need it to do.
+so while it's not as simple as in python, it's still pretty simple. and as for the solution for the code, I have 
+´´´cpp 
+#include <string>
+std::string number_to_string(int num) {
+    return std::to_string(num);
+}
+´´´
+i'm quite happy with the result of this, and while i don't know if this is a 'good code', it solved the issue in just a single line. 
+
+>NOTE> something that i'll defintly do, is read the python compiler source code eventually, since this could give me and idea on how to create a compiler for an interpreted language
