@@ -1,55 +1,62 @@
 /- 17-07-2026 / 12:39 -/
-NO AI WAS USED IN THE MAKING OF THIS.
+Everything in this blog was written by me without AI assistance.
 
-You might think it's a bit dumb for the first project in cpp to be to try to create a programming language, and it is. 
+You might think it's a bit dumb for the first project in C++ to be trying to create a programming language, and it is.
 
-I'm Lico and i'll be documenting everything that I read online and what i figure out in this repo / .txt
+I'm Lico, and I'll be documenting everything that I read online and what I figure out in this repo/.txt.
 
-First things first, is i need to define what I want from this programming language. not a lot, since the objective is to only understand the fundementals of programming.
-But something that i'd like to do is make it an interpreted language, what this means is that instead of compiling the whole code and executing it at a lower level, the code runs line by line and figures out what to do on the go.
-(A caveat here, i'm not sure if this is correct, i'll look further into this later and then i will add another note here.)
+First things first, I need to define what I want from this programming language. Not a lot, since the objective is only to understand the fundamentals of programming.
+But something that I'd like to do is make it an interpreted language. What this means is that, instead of compiling the whole code and executing it at a lower level, the code runs line by line and figures out what to do on the go.
+(A caveat here: I'm not sure if this is correct. I'll look further into this later, and then I will add another note here.)
 
+And although I'm trying to create a programming language, I have 0 EXPERIENCE WITH C++, so I'll start by learning the syntax.
 
-and although i'm trying to create a programming language, i have 0 EXPERIENCE WITH C++ so I'll start by learning the syntax
+As C++ is a compiled language, I need to figure out a way to compile my code. Since I'm on a Windows environment and using VSCode, I need to install a few tools:
 
-As c++ is a compiled language, i need to figure out a way to compile my code, since i'm on a windows environment, and using VSCode, i need to install a few tools
 - MSYS2
 - C/C++ for Visual Studio Code
 
-after installing msy2s i ran ´pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain´ and installed everything.
-then i added a new environment variable, on PATH, for the path ´C:\msys64\ucrt64\bin´
-after checking and running a code that i found on stackoverflow which is
+After installing MSYS2, I ran `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain` and installed everything.
+Then I added a new environment variable to PATH for the path `C:\msys64\ucrt64\bin`.
 
-´´´
+After checking that everything was installed, I ran some code that I found on Stack Overflow:
+
+```cpp
 #include <iostream>
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
-´´´
-I got my First Hello World!
+````
 
-and for today i'm out of time, But tomorrow i'll continue with the project
+I got my first Hello World!
 
-
+And for today I'm out of time, but tomorrow I'll continue with the project.
 
 /- 18-07-2026 / 10:24 -/
-(earlier today i added a gitignore that i forgot to add yesterday, so there was a bunch of useless files in the repository)
-Today i want to understand better how the c++ language works, so i'll try to solve a leet code question using c++.
-And since i'm a complete begginer on the syntax, i'll start with a VERY simple challange, transforming a int into a string.
 
-so lets say we have a variable int 10, and we want the result to be a str "10", on python this would be as simple as str(10), but i have no idea if the same can apply in c++
+(Earlier today I added a .gitignore that I forgot to add yesterday, so there were a bunch of useless files in the repository.)
 
-i've had a TON of issues already, apparently you need to include a #include <string>, just to be able to assign strings in a code.
-After a few searches, i found the std::to_string function from the <string> library, and this does exactly what i need it to do.
-so while it's not as simple as in python, it's still pretty simple. and as for the solution for the code, I have 
-´´´cpp 
+Today I want to understand better how the C++ language works, so I'll try to solve a LeetCode question using C++.
+And since I'm a complete beginner with the syntax, I'll start with a VERY simple challenge: transforming an int into a string.
+
+So let's say we have an int variable with the value 10, and we want the result to be the string "10". In Python, this would be as simple as `str(10)`, but I have no idea if the same can be done in C++.
+
+I've already had a TON of issues. Apparently, you need to `#include <string>` just to be able to use strings in your code.
+After a few searches, I found the `std::to_string` function from the `<string>` library, and this does exactly what I need it to do.
+
+So while it's not as simple as in Python, it's still pretty simple. As for the solution, I have:
+
+```cpp
 #include <string>
+
 std::string number_to_string(int num) {
     return std::to_string(num);
 }
-´´´
-i'm quite happy with the result of this, and while i don't know if this is a 'good code', it solved the issue in just a single line. 
+```
 
->NOTE> something that i'll defintly do, is read the python compiler source code eventually, since this could give me and idea on how to create a compiler for an interpreted language
+I'm quite happy with the result, and while I don't know if this is "good code," it solved the issue in just a single line.
+
+> NOTE: Something that I'll definitely do is read the Python compiler source code eventually, since this could give me an idea of how to create a compiler for an interpreted language.
+
